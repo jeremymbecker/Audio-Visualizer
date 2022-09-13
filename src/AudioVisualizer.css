@@ -1,0 +1,112 @@
+#audio-visualizer{
+    background: url('https://wallpapercave.com/wp/wp5144550.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 883px;
+    width: 2000px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    left: -125px;
+}
+
+#canvas1{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+}
+
+.slider_container {
+    width: 2000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    position: absolute;
+    top: 680px;
+    left: 7.5px;
+}
+
+.seek_slider {
+    width: 80%;
+    height: 2px;
+}
+
+.current-time,
+.total-duration {
+  padding: 10px;
+  color: white;
+}
+
+#controls{
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    z-index: 100;
+    position: absolute;
+    top: 800px;
+    left: 120px;
+}
+
+#volume-controls{
+    display: inline-flex;
+    align-items: center;
+    position: absolute;
+    left: 50px;
+}
+
+#volume-slider{
+    width: 400px;
+    position: absolute;
+    left: 125px;
+}
+
+#play-controls{
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    left: 775px;
+    width: 225px;
+}
+
+#extra-controls{
+    display: inline-flex;
+    justify-content: space-between;
+    width: 300px;
+    position: absolute;
+    left: 1400px;
+}
+
+.button-cursor-pointer{
+    cursor: pointer;
+}
+
+#fileupload{
+    position: absolute;
+    color: white;
+    z-index: 100;
+    position: absolute;
+    top: 50px;
+    left: 940px;
+}
+
+#playlist{
+    height: 25px;
+    width: 300px;
+    z-index: 100;
+    position: absolute;
+    top: 100px;
+}
+
+#playbackSpeeds {
+    visibility: hidden;
+}
