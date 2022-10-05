@@ -3,15 +3,15 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    height: 883px;
-    width: 2000px;
+    height: 100vh;
+    width: 100%;
     display: flex;
     align-items: center;
     flex-direction: column;
     margin: 0;
     position: absolute;
     top: 0;
-    left: -125px;
+    left: 0;
 }
 
 #canvas1{
@@ -30,13 +30,25 @@
     align-items: center;
     z-index: 100;
     position: absolute;
-    top: 680px;
+    top: 765px;
     left: 7.5px;
 }
 
 .seek_slider {
     width: 80%;
     height: 2px;
+    -webkit-appearance: none;
+    background: linear-gradient(90deg, rgb(50,30,200) 0%, rgb(251,243,236) 0%);
+}
+
+.seek_slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 12px;
+    background: rgb(251,243,236);
+    cursor: pointer;
+    overflow: visible;
 }
 
 .current-time,
@@ -52,8 +64,8 @@
     width: 100%;
     z-index: 100;
     position: absolute;
-    top: 800px;
-    left: 120px;
+    top: 900px;
+    left: 0;
 }
 
 #volume-controls{
@@ -65,8 +77,25 @@
 
 #volume-slider{
     width: 400px;
+    height: 6px;
+    border-radius: 12px;
     position: absolute;
     left: 125px;
+}
+
+.volumeSlider{
+    -webkit-appearance: none;
+    background: linear-gradient(90deg, rgb(168,221,240) 100%, rgb(251,243,236) 100%);
+}
+
+.volumeSlider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 12px;
+    background: rgb(251,243,236);
+    cursor: pointer;
+    overflow: visible;
 }
 
 #play-controls{
@@ -74,7 +103,7 @@
     align-items: center;
     justify-content: space-between;
     position: absolute;
-    left: 775px;
+    left: 912.5px;
     width: 225px;
 }
 
@@ -83,7 +112,7 @@
     justify-content: space-between;
     width: 300px;
     position: absolute;
-    left: 1400px;
+    left: 1600px;
 }
 
 .button-cursor-pointer{
@@ -96,7 +125,7 @@
     z-index: 100;
     position: absolute;
     top: 50px;
-    left: 940px;
+    left: 960px;
 }
 
 #playlist{

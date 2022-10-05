@@ -147,6 +147,9 @@ class AV extends React.Component{
         if (!isNaN(song.duration)){
             seekPosition = song.currentTime * (100 / song.duration);
             seekSlider.value = seekPosition;
+            console.log(seekSlider.value);
+            var color = 'linear-gradient(90deg, rgb(50,30,200)' + seekSlider.value + '%, rgb(251,243,236)' + seekSlider.value + '%)';
+            seekSlider.style.background = color;
  
             // Calculate the time left and the total duration
             let currentMinutes = Math.floor(song.currentTime / 60);
@@ -171,6 +174,8 @@ class AV extends React.Component{
         let song = document.getElementById("audio1");
         let volSlider= document.getElementById("volume-slider");
         song.volume = volSlider.value / 100;
+        var color = 'linear-gradient(90deg, rgb(168,221,240)' + volSlider.value + '%, rgb(251,243,236)' + volSlider.value + '%)';
+        volSlider.style.background = color;
         this.setState({
             volume: volSlider.value
         });
@@ -268,20 +273,20 @@ class AV extends React.Component{
               //  grd.addColorStop(0.9, '#F04393');
               //  grd.addColorStop(0, '#08203C');
                 grd.addColorStop(1, '#3B16DE');
-                grd.addColorStop(0.95, '#071AD6');
-                grd.addColorStop(0.9, '#66209d');
-                grd.addColorStop(0.85, '#AF0D49');
+                grd.addColorStop(0.97, '#071AD6');
+                grd.addColorStop(0.93, '#66209d');
+                grd.addColorStop(0.89, '#AF0D49');
 
-                grd.addColorStop(0.8, '#F20A08');
-                grd.addColorStop(0.73, '#F22707');
-                grd.addColorStop(0.66, '#FF4E15');
-                grd.addColorStop(0.59, '#F96A0A');
-                grd.addColorStop(0.52, '#F8990B');
-                grd.addColorStop(0.45, '#F1E60E');
+                grd.addColorStop(0.85, '#F20A08');
+                grd.addColorStop(0.8, '#F22707');
+                grd.addColorStop(0.75, '#FF4E15');
+                grd.addColorStop(0.7, '#F96A0A');
+                grd.addColorStop(0.65, '#F8990B');
+                grd.addColorStop(0.6, '#F1E60E');
                 //grd.addColorStop(1, '#ffaf7b')
                 ctx.fillStyle = grd;
                 //ctx.fillStyle = 'rgb(' + red + ',' + green + ',' + blue + ')';
-                ctx.fillRect(x, (canvas.height-barHeight) / 2, barWidth, barHeight);
+                ctx.fillRect(x, ((canvas.height-barHeight) - 330) / 1.4, barWidth, barHeight);
                 
                 x += barWidth;
             }
